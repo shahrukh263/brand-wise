@@ -1,5 +1,6 @@
 import type {NextPage} from 'next';
 import Head from 'next/head';
+import PricingHero from '../components/PricingHero';
 
 const Pricing: NextPage = () => {
 	return (
@@ -7,6 +8,7 @@ const Pricing: NextPage = () => {
 			<Head>
 				<title>Pricing</title>
 			</Head>
+            <PricingHero/>
 		</>
 	);
 };

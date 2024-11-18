@@ -3,8 +3,13 @@ import type { NextComponentType } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '../images/Logo.svg';
+import { useState } from 'react';
 
 const Navbar: NextComponentType = () => {
+	const [navOpen, setNavOpen] = useState(false);
+	const handleToggle = () => {
+		setNavOpen((prev) => !prev);
+	};
 	return (
 		<>
 			<header className='sticky w-full shadow-[0px_1px_4px_0px_#2B28660D] backdrop-filter backdrop-blur-md'>
@@ -17,14 +22,20 @@ const Navbar: NextComponentType = () => {
 								</a>
 							</Link>
 							<div className='md:hidden block'><Link href={'#'} passHref><a className='inline-block text-[14px] font-medium leading-[20px] tracking-[-0.6%] text-white py-[6px] px-[10px] theme-btn rounded-lg border-[1px] border-[solid] [border-image-source:linear-gradient(180deg,_rgba(255,_255,_255,_0.12)_0%,_rgba(255,_255,_255,_0)_100%)] [box-shadow:0px_0px_0px_1px_#335CFF] [box-shadow:0px_1px_2px_0px_rgba(14,_18,_27,_0.24)]'>Start Free Trial</a></Link></div>
-							<button type='button' className='md:hidden block bg-white [box-shadow:0px_0px_0px_1px_rgba(225,228,234,1)] [box-shadow:0px_1px_3px_0px_rgba(14,18,27,0.12)] rounded-lg p-[6px]'>
-								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-[#475467] w-7 h-7 inline-block">
-									<path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-								</svg>
-
+							<button onClick={handleToggle} type='button' className='md:hidden block bg-white [box-shadow:0px_0px_0px_1px_rgba(225,228,234,1)] [box-shadow:0px_1px_3px_0px_rgba(14,18,27,0.12)] rounded-lg p-[6px]'>
+								{navOpen ? (
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-[#475467] w-7 h-7 inline-block">
+									<path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+								  </svg>
+								  
+								) : (
+									<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="text-[#475467] w-7 h-7 inline-block">
+										<path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+									</svg>
+								)}
 							</button>
 						</div>
-						<div className='flex md:items-center w-full md:flex-row flex-col'>
+						<div className={'md:items-center w-full md:flex-row flex-col' +  (navOpen ? " flex" : " md:flex hidden")}>
 							<ul className='md:flex md:mx-auto'>
 								<li><Link href={'#'} passHref><a className='inline-flex items-center gap-1 py-[22px] lg:px-7 md:px-3 text-[#475467] text-[14px] font-medium leading-[20px] tracking-[-0.6%]'>Product <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-[rgba(71,84,103,1)]">
 									<path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
