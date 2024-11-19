@@ -4,6 +4,7 @@ import PricingHero from '../components/PricingHero';
 import FeaturePlan from '../components/FeaturePlan';
 import TestimonialComp from '../components/TestimonialComp';
 import BrandComp from '../components/BrandComp';
+import FaqComp from '../components/FaqComp';
 
 const Pricing: NextPage = () => {
 	return (
@@ -15,6 +16,7 @@ const Pricing: NextPage = () => {
             <FeaturePlan/>
             <TestimonialComp/>
 			<BrandComp/>
+			<FaqComp/>
 		</>
 	);
 };
