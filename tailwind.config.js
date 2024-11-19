@@ -6,8 +6,8 @@ module.exports = {
 				xs: '280px',
 			},
 			colors: {
-				primary: '#F9C933',
-				'light-primary': '#FEF6DF',
+				primary: '#6962FB',
+				'light-primary': '#C3C1FD',
 				'dark-gray': '#343A40',
 				'light-gray': '#495057',
 			},

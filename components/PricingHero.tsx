@@ -1,10 +1,11 @@
 import type { NextComponentType } from "next";
 import DataIcon from "../images/database-icon.svg";
 import Image from "next/image";
+import Link from "next/link";
 const PricingHero: NextComponentType = () => {
   return (
     <>
-      <section className="pt-[60px] pb-[60px] md:pt-[100px] md:pb-[100px] ">
+      <section className="pt-[60px] pb-[60px] md:pt-[100px] md:pb-[100px] relative bg-[url('../images/price-hero-bg.png')] bg-cover">
         <div className="innerDiv">
           <div className="text-center">
             <h1 className="font-[600] lg:text-[72px] md:text-[60px] text-[40px] md:leading-[1] text-[#2B2866] tracking-[-0.02em]">
@@ -26,7 +27,7 @@ const PricingHero: NextComponentType = () => {
               support tickets per month on average
             </h2>
             <div className="mx-auto md:w-9/12 w-full mb-[48px]"></div>
-            <div>
+            <div className="pb-[48px] mb-[48px] border-b">
               <div className="text-center">
                 <ul className="bg-[#F2F4F7] rounded-[12px] py-[4px] px-[4px] inline-flex items-center gap-[4px] mb-6">
                   <li>
@@ -44,9 +45,9 @@ const PricingHero: NextComponentType = () => {
                   </li>
                 </ul>
               </div>
-              <div className="flex flex-wrap sm:-mx-4 lg:gap-0 gap-y-3">
-                <div className="sm:px-4 lg:w-1/4 md:w-1/2 sm:w-1/2 w-full">
-                  <div className="rounded-[16px] bg-white py-8 2xl:px-8 px-6 border border-[#E4E7EC] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]">
+              <div className="flex flex-wrap xl:-mx-3 sm:-mx-2 lg:gap-y-0 gap-y-3">
+                <div className="lg:px-3 sm:px-2 lg:w-1/4 md:w-1/2 sm:w-1/2 w-full">
+                  <div className="rounded-[16px] bg-white py-8 2xl:px-8 xl:px-5 px-4 border border-[#E4E7EC] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]">
                     <div className="mb-6">
                       <h4 className="text-[rgba(43,40,102,1)] text-[18px] font-medium tracking-[-0.006em] mb-1 leading-[28px]">
                         Start
@@ -56,7 +57,7 @@ const PricingHero: NextComponentType = () => {
                       </p>
                     </div>
                     <div className="flex gap-[8px] mb-6">
-                      <h2 className="text-[#2B2866] text-[40px] font-[600] tracking-[-0.02em] leading-[1]">
+                      <h2 className="text-[#2B2866] xl:text-[40px] text-[36px] font-[600] tracking-[-0.02em] leading-[1]">
                         $49
                       </h2>
                       <div>
@@ -79,19 +80,22 @@ const PricingHero: NextComponentType = () => {
                     </div>
                   </div>
                 </div>
-				<div className="sm:px-4 lg:w-1/4 md:w-1/2 sm:w-1/2 w-full">
-                  <div className="rounded-[16px] bg-white py-8 2xl:px-8 px-6 border border-[#E4E7EC] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]">
+                <div className="lg:px-3 sm:px-2 lg:w-1/4 md:w-1/2 sm:w-1/2 w-full">
+                  <div className="relative rounded-[16px] bg-white py-8 2xl:px-8 xl:px-5 px-4 border-2 border-[#6962FB] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]">
+                    <span className="absolute right-3 top-3 font-medium tracking-[-0.006em] text-sm text-primary inline-block py-1 px-3 border border-light-primary rounded-lg">
+                      Recommended
+                    </span>
                     <div className="mb-6">
                       <h4 className="text-[rgba(43,40,102,1)] text-[18px] font-medium tracking-[-0.006em] mb-1 leading-[28px]">
-                        Start
+                        Pro
                       </h4>
                       <p className="text-[rgba(71,84,103,1)] text-[14px] tracking-[-0.006em] leading-[20px]">
-                        Best for personal use
+                        Best for small teams
                       </p>
                     </div>
                     <div className="flex gap-[8px] mb-6">
-                      <h2 className="text-[#2B2866] text-[40px] font-[600] tracking-[-0.02em] leading-[1]">
-                        $49
+                      <h2 className="text-[#2B2866] xl:text-[40px] text-[36px] font-[600] tracking-[-0.02em] leading-[1]">
+                        $99
                       </h2>
                       <div>
                         <p className="text-[#525252] text-[14px] font-[500] tracking-[-0.006em]">
@@ -102,30 +106,30 @@ const PricingHero: NextComponentType = () => {
                         </p>
                       </div>
                     </div>
-                    <a className="cursor-pointer text-[14px] tracking-[-0.006em] font-medium leading-[20px] py-[10px] block w-full px-3 text-center rounded-[10px] [box-shadow:0px_0px_0px_1px_rgba(225,228,234,1),_0px_1px_3px_0px_rgba(14,18,27,.12)]">
+                    <a className="cursor-pointer text-[14px] text-white tracking-[-0.006em] font-medium leading-[20px] py-[10px] block w-full px-3 text-center rounded-[10px] [box-shadow:0px_0px_0px_1px_rgba(225,228,234,1),_0px_1px_3px_0px_rgba(14,18,27,.12)] theme-btn">
                       Start 7-day Free Trial
                     </a>
                     <div className="mt-6 flex items-center gap-[2px] justify-center">
                       <Image src={DataIcon} alt="" />
                       <span className="text-[16px] text-[#0C111D] font-[500] tracking-[-0.011em] leading-[24px]">
-                        5,000 AI monthly credits
+                        10,000 AI monthly credits
                       </span>
                     </div>
                   </div>
                 </div>
-				<div className="sm:px-4 lg:w-1/4 md:w-1/2 sm:w-1/2 w-full">
-                  <div className="rounded-[16px] bg-white py-8 2xl:px-8 px-6 border border-[#E4E7EC] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]">
+                <div className="lg:px-3 sm:px-2 lg:w-1/4 md:w-1/2 sm:w-1/2 w-full">
+                  <div className="rounded-[16px] bg-white py-8 2xl:px-8 xl:px-5 px-4 border border-[#E4E7EC] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]">
                     <div className="mb-6">
                       <h4 className="text-[rgba(43,40,102,1)] text-[18px] font-medium tracking-[-0.006em] mb-1 leading-[28px]">
-                        Start
+                        Scale
                       </h4>
                       <p className="text-[rgba(71,84,103,1)] text-[14px] tracking-[-0.006em] leading-[20px]">
-                        Best for personal use
+                        Best for mid-sized teams
                       </p>
                     </div>
                     <div className="flex gap-[8px] mb-6">
-                      <h2 className="text-[#2B2866] text-[40px] font-[600] tracking-[-0.02em] leading-[1]">
-                        $49
+                      <h2 className="text-[#2B2866] xl:text-[40px] text-[36px] font-[600] tracking-[-0.02em] leading-[1]">
+                        $179
                       </h2>
                       <div>
                         <p className="text-[#525252] text-[14px] font-[500] tracking-[-0.006em]">
@@ -142,24 +146,24 @@ const PricingHero: NextComponentType = () => {
                     <div className="mt-6 flex items-center gap-[2px] justify-center">
                       <Image src={DataIcon} alt="" />
                       <span className="text-[16px] text-[#0C111D] font-[500] tracking-[-0.011em] leading-[24px]">
-                        5,000 AI monthly credits
+                        20,000 AI monthly credits
                       </span>
                     </div>
                   </div>
                 </div>
-				<div className="sm:px-4 lg:w-1/4 md:w-1/2 sm:w-1/2 w-full">
-                  <div className="rounded-[16px] bg-white py-8 2xl:px-8 px-6 border border-[#E4E7EC] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]">
+                <div className="lg:px-3 sm:px-2 lg:w-1/4 md:w-1/2 sm:w-1/2 w-full">
+                  <div className="rounded-[16px] bg-white py-8 2xl:px-8 xl:px-5 px-4 border border-[#E4E7EC] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]">
                     <div className="mb-6">
                       <h4 className="text-[rgba(43,40,102,1)] text-[18px] font-medium tracking-[-0.006em] mb-1 leading-[28px]">
-                        Start
+                        Enterprise
                       </h4>
                       <p className="text-[rgba(71,84,103,1)] text-[14px] tracking-[-0.006em] leading-[20px]">
-                        Best for personal use
+                        Best for many large teams
                       </p>
                     </div>
                     <div className="flex gap-[8px] mb-6">
-                      <h2 className="text-[#2B2866] text-[40px] font-[600] tracking-[-0.02em] leading-[1]">
-                        $49
+                      <h2 className="text-[#2B2866] xl:text-[40px] text-[36px] font-[600] tracking-[-0.02em] leading-[1]">
+                        $269
                       </h2>
                       <div>
                         <p className="text-[#525252] text-[14px] font-[500] tracking-[-0.006em]">
@@ -176,13 +180,17 @@ const PricingHero: NextComponentType = () => {
                     <div className="mt-6 flex items-center gap-[2px] justify-center">
                       <Image src={DataIcon} alt="" />
                       <span className="text-[16px] text-[#0C111D] font-[500] tracking-[-0.011em] leading-[24px]">
-                        5,000 AI monthly credits
+                        30,000 AI monthly credits
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+			<div className="text-center">
+				<h4 className="text-[#2B2866] md:text-[24px] text-[20px] md:leading-[32px] leading-[28px] font-semibold md:tracking-[-0.02em] tracking-[-0.01em] mb-4">Have questions or want to build a custom plan for your store?</h4>
+				<Link href={'#'} passHref><a className='inline-block p-[10px] rounded-lg text-[#475467] text-[14px] font-medium leading-[20px] tracking-[-0.6%] [box-shadow:0px_0px_0px_1px_#E1E4EA,_0px_1px_3px_0px_#0E121B1F] bg-white'>Contact Sales</a></Link>
+			</div>
           </div>
         </div>
       </section>

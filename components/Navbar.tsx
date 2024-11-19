@@ -49,8 +49,8 @@ const Navbar: NextComponentType = () => {
 
 							</ul>
 							<ul className='flex gap-4'>
-								<li><Link href={'#'} passHref><a className='inline-block p-[6px] rounded-lg text-[#475467] text-[14px] font-medium leading-[20px] tracking-[-0.6%] [box-shadow:0px_0px_0px_1px_#E1E4EA] [box-shadow:0px_1px_3px_0px_#0E121B1F] bg-white'>Log In</a></Link></li>
-								<li className='md:block hidden'><Link href={'#'} passHref><a className='inline-block text-[14px] font-medium leading-[20px] tracking-[-0.6%] text-white py-[6px] px-[10px] theme-btn rounded-lg border-[1px] border-[solid] [border-image-source:linear-gradient(180deg,_rgba(255,_255,_255,_0.12)_0%,_rgba(255,_255,_255,_0)_100%)] [box-shadow:0px_0px_0px_1px_#335CFF] [box-shadow:0px_1px_2px_0px_rgba(14,_18,_27,_0.24)]'>Start Free Trial</a></Link></li>
+								<li><Link href={'#'} passHref><a className='inline-block p-[6px] rounded-lg text-[#475467] text-[14px] font-medium leading-[20px] tracking-[-0.6%] [box-shadow:0px_0px_0px_1px_#E1E4EA,_0px_1px_3px_0px_#0E121B1F] bg-white'>Log In</a></Link></li>
+								<li className='md:block hidden'><Link href={'#'} passHref><a className='inline-block text-[14px] font-medium leading-[20px] tracking-[-0.6%] text-white py-[6px] px-[10px] theme-btn rounded-lg border-[1px] border-[solid] [border-image-source:linear-gradient(180deg,_rgba(255,_255,_255,_0.12)_0%,_rgba(255,_255,_255,_0)_100%)] [box-shadow:0px_0px_0px_1px_#335CFF,_0px_1px_2px_0px_#0E121B3D]'>Start Free Trial</a></Link></li>
 							</ul>
 						</div>
 					</nav>
