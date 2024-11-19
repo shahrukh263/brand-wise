@@ -19,7 +19,7 @@ import ShopifyIcon from "../images/icons/shopify-icon.svg";
 const FeaturePlan: NextComponentType = () => {
   return (
     <>
-      <section className="lg:py-24 md:py-20 py-16 bg-[url('../images/feature-bg.png')] md:bg-cover bg-contain">
+      <section className="lg:py-24 md:py-20 sm:py-16 py-12 bg-[url('../images/feature-bg.png')] md:bg-cover bg-contain">
         <div className="innerDiv">
           <h3 className="md:text-[40px] md:leading-[1] text-[32px] leading-[38px] font-semibold tracking-[-0.02em] text-[#2B2866] text-center md:mb-12 mb-8">
             Every feature on every plan

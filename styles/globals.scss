@@ -3,101 +3,121 @@
 @tailwind utilities;
 
 * {
-	font-family: "Inter", sans-serif;
-	box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
 }
 
 /* Tablet (xs)  */
 @media only screen and (min-width: 280px) {
-	.innerDiv {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
+  .innerDiv {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-	header .innerDiv {
-		padding-top: 2px;
-		padding-bottom: 2px;
-	}
+  header .innerDiv {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
 }
 
 /* Tablet (sm)  */
 @media only screen and (min-width: 640px) {
-	.innerDiv {
-		padding-left: 60px;
-		padding-right: 60px;
-	}
+  .innerDiv {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 
-	header .innerDiv {
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
+  header .innerDiv {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 /* Tablet (md)  */
 @media only screen and (min-width: 768px) {
-	.innerDiv {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
+  .innerDiv {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 
-	header .innerDiv {
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
+  header .innerDiv {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 /* Desktop (lg) */
 @media only screen and (min-width: 1024px) {
-	.innerDiv {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
+  .innerDiv {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-	header .innerDiv {
-		padding-top: 0;
-		padding-bottom: 0;
-	}
+  header .innerDiv {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 /* Desktop (xl)  */
 @media only screen and (min-width: 1280px) {
-	.innerDiv {
-		max-width: calc(1280px + 160px);
-		margin: 0 auto;
-		padding-left: 80px;
-		padding-right: 80px;
-	}
+  .innerDiv {
+    max-width: calc(1280px + 160px);
+    margin: 0 auto;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 
-	header .innerDiv {
-		padding-top: 0;
-		padding-bottom: 0;
-	}
+  header .innerDiv {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 /* Desktop (2xl)  */
 @media only screen and (min-width: 1536px) {
-	.innerDiv {
-		max-width: 1280px;
-		margin: 0 auto;
-		padding-left: 0;
-		padding-right: 0;
-	}
+  .innerDiv {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-	header .innerDiv {
-		padding-top: 0;
-		padding-bottom: 0;
-	}
+  header .innerDiv {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 /* Max Width 2560px */
 main,
 header,
 footer {
-	max-width: 2560px;
-	margin: 0 auto;
+  max-width: 2560px;
+  margin: 0 auto;
 }
 
 .theme-btn {
-	background: linear-gradient(0deg, #6962FB, #6962FB),
-		linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(0deg, #6962fb, #6962fb),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.16) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+.img-block {
+	border: .75px solid rgba(0, 0, 0, 0.16) !important;
+  & span {
+    display: block !important;
+	border: .75px solid !important;
+  }
+  & img {
+    display: block !important;
+
+  }
+}
+.mySwiper {
+& .swiper-wrapper{
+	align-items: center;
+}
 }
