@@ -3,6 +3,7 @@ import Head from 'next/head';
 import PricingHero from '../components/PricingHero';
 import FeaturePlan from '../components/FeaturePlan';
 import TestimonialComp from '../components/TestimonialComp';
+import BrandComp from '../components/BrandComp';
 
 const Pricing: NextPage = () => {
 	return (
@@ -13,6 +14,7 @@ const Pricing: NextPage = () => {
             <PricingHero/>
             <FeaturePlan/>
             <TestimonialComp/>
+			<BrandComp/>
 		</>
 	);
 };

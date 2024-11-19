@@ -7,9 +7,6 @@ import GoodwellLogo from "../images/goodwell-logo.png";
 import UserImg from "../images/user-img.png";
 // Import Swiper styles
 import "swiper/css";
-// import "swiper/css/pagination";
-// // import required modules
-// import { Pagination } from "swiper";
 
 const TestimonialComp: NextComponentType = () => {
   return (
@@ -33,7 +30,7 @@ const TestimonialComp: NextComponentType = () => {
                 spaceBetween: 15,
               },
               480: {
-                slidesPerView: 1.5,
+                slidesPerView: 1.2,
                 spaceBetween: 24,
               },
               // when window width is >= 768px
@@ -41,7 +38,7 @@ const TestimonialComp: NextComponentType = () => {
                 slidesPerView: 2.1,
                 spaceBetween: 24,
               },
-              // when window width is >= 1280px
+              // when window width is >= 1024
               1024: {
                 slidesPerView: 3,
                 spaceBetween: 24,
