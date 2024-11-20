@@ -7,7 +7,7 @@ const FaqComp: NextComponentType = () => {
     <>
       <section className="lg:py-24 md:py-20 sm:py-16 py-12">
         <div className="innerDiv">
-          <div className="text-center md:mb-16 mb-8">
+          <div className="text-center md:mb-16 mb-8" data-aos="fade-up">
             <h4 className="text-[#2B2866] font-semibold lg:text-[56px] lg:leading-[1] md:text-[48px] md:leading-[1.2] sm:text-[42px] sm:leading-[1.3] text-[32px] leading-[38px]">
               Frequently asked questions
             </h4>
@@ -17,7 +17,7 @@ const FaqComp: NextComponentType = () => {
               you're looking for.
             </p>
           </div>
-          <Accordion className="accordian-main mx-auto lg:w-8/12 xl:w-7/12 md:w-9/12 w-full">
+          <Accordion data-aos="fade-up" className="accordian-main mx-auto lg:w-8/12 xl:w-7/12 md:w-9/12 w-full">
             <AccordionItem initialEntered className={'border-b border-b-[#E4E7EC] mb-7 pb-7'} 
              header={
               <div className="flex justify-between items-center cursor-pointer">

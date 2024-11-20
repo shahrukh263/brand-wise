@@ -7,7 +7,7 @@ const PricingHero: NextComponentType = () => {
     <>
       <section className="pt-[60px] pb-[60px] md:pt-[100px] md:pb-[100px] relative bg-[url('../images/price-hero-bg.png')] bg-cover">
         <div className="innerDiv">
-          <div className="text-center">
+          <div className="text-center" data-aos="fade-up">
             <h1 className="font-[600] lg:text-[72px] md:text-[60px] text-[40px] md:leading-[1] text-[#2B2866] tracking-[-0.02em]">
               Simple, transparent pricing
             </h1>
@@ -19,7 +19,10 @@ const PricingHero: NextComponentType = () => {
             </p>
           </div>
           <div className="lg:mt-[80px] md:mt-[60px] sm:mt-[42px] mt-[32px]">
-            <h2 className="mb-6 text-center md:text-[24px] md:leading-[32px] text-[20px] leading-[28px] font-[600] text-[#2B2866] tracking-[-0.02em]">
+            <h2
+              data-aos="fade-up"
+              className="mb-6 text-center md:text-[24px] md:leading-[32px] text-[20px] leading-[28px] font-[600] text-[#2B2866] tracking-[-0.02em]"
+            >
               I have{" "}
               <span className="bg-[#F4F4FF] rounded-[8px] text-[#6962FB] py-[4px] px-[8px]">
                 10,000
@@ -47,7 +50,10 @@ const PricingHero: NextComponentType = () => {
               </div>
               <div className="flex flex-wrap xl:-mx-3 sm:-mx-2 lg:gap-y-0 gap-y-3">
                 <div className="lg:px-3 sm:px-2 lg:w-1/4 md:w-1/2 sm:w-1/2 w-full">
-                  <div className="rounded-[16px] bg-white py-8 2xl:px-8 xl:px-5 px-4 border border-[#E4E7EC] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]">
+                  <div
+                    data-aos="fade-up"
+                    className="rounded-[16px] bg-white py-8 2xl:px-8 xl:px-5 px-4 border border-[#E4E7EC] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]"
+                  >
                     <div className="mb-6">
                       <h4 className="text-[rgba(43,40,102,1)] text-[18px] font-medium tracking-[-0.006em] mb-1 leading-[28px]">
                         Start
@@ -80,7 +86,10 @@ const PricingHero: NextComponentType = () => {
                     </div>
                   </div>
                 </div>
-                <div className="lg:px-3 sm:px-2 lg:w-1/4 md:w-1/2 sm:w-1/2 w-full">
+                <div
+                  data-aos="fade-up"
+                  className="lg:px-3 sm:px-2 lg:w-1/4 md:w-1/2 sm:w-1/2 w-full"
+                >
                   <div className="relative rounded-[16px] bg-white py-8 2xl:px-8 xl:px-5 px-4 border-2 border-[#6962FB] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]">
                     <span className="absolute right-3 top-3 font-medium tracking-[-0.006em] text-sm text-primary inline-block py-1 px-3 border border-light-primary rounded-lg">
                       Recommended
@@ -117,7 +126,10 @@ const PricingHero: NextComponentType = () => {
                     </div>
                   </div>
                 </div>
-                <div className="lg:px-3 sm:px-2 lg:w-1/4 md:w-1/2 sm:w-1/2 w-full">
+                <div
+                  data-aos="fade-up"
+                  className="lg:px-3 sm:px-2 lg:w-1/4 md:w-1/2 sm:w-1/2 w-full"
+                >
                   <div className="rounded-[16px] bg-white py-8 2xl:px-8 xl:px-5 px-4 border border-[#E4E7EC] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]">
                     <div className="mb-6">
                       <h4 className="text-[rgba(43,40,102,1)] text-[18px] font-medium tracking-[-0.006em] mb-1 leading-[28px]">
@@ -152,7 +164,10 @@ const PricingHero: NextComponentType = () => {
                   </div>
                 </div>
                 <div className="lg:px-3 sm:px-2 lg:w-1/4 md:w-1/2 sm:w-1/2 w-full">
-                  <div className="rounded-[16px] bg-white py-8 2xl:px-8 xl:px-5 px-4 border border-[#E4E7EC] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]">
+                  <div
+                    data-aos="fade-up"
+                    className="rounded-[16px] bg-white py-8 2xl:px-8 xl:px-5 px-4 border border-[#E4E7EC] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]"
+                  >
                     <div className="mb-6">
                       <h4 className="text-[rgba(43,40,102,1)] text-[18px] font-medium tracking-[-0.006em] mb-1 leading-[28px]">
                         Enterprise
@@ -187,10 +202,16 @@ const PricingHero: NextComponentType = () => {
                 </div>
               </div>
             </div>
-			<div className="text-center">
-				<h4 className="text-[#2B2866] md:text-[24px] text-[20px] md:leading-[32px] leading-[28px] font-semibold md:tracking-[-0.02em] tracking-[-0.01em] mb-4">Have questions or want to build a custom plan for your store?</h4>
-				<Link href={'#'} passHref><a className='inline-block p-[10px] rounded-lg text-[#475467] text-[14px] font-medium leading-[20px] tracking-[-0.6%] [box-shadow:0px_0px_0px_1px_#E1E4EA,_0px_1px_3px_0px_#0E121B1F] bg-white'>Contact Sales</a></Link>
-			</div>
+            <div className="text-center" data-aos="fade-up">
+              <h4 className="text-[#2B2866] md:text-[24px] text-[20px] md:leading-[32px] leading-[28px] font-semibold md:tracking-[-0.02em] tracking-[-0.01em] mb-4">
+                Have questions or want to build a custom plan for your store?
+              </h4>
+              <Link href={"#"} passHref>
+                <a className="inline-block p-[10px] rounded-lg text-[#475467] text-[14px] font-medium leading-[20px] tracking-[-0.6%] [box-shadow:0px_0px_0px_1px_#E1E4EA,_0px_1px_3px_0px_#0E121B1F] bg-white">
+                  Contact Sales
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

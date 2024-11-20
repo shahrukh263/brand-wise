@@ -13,7 +13,7 @@ const TestimonialComp: NextComponentType = () => {
     <>
       <section className='lg:py-24 md:py-20 sm:py-16 py-12 bg-[url("../images/bg-testimonial.png")] bg-cover'>
         <div className="innerDiv">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16" data-aos="fade-up">
             <h3 className="text-[rgba(43,40,102,1)] md:text-[56px] md:leading-[1] text-[32px] leading-[38px] font-semibold tracking-[-0.02em] xl:w-9/12 mx-auto">
               Trusted by fast growing companies around the world
             </h3>
