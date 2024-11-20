@@ -156,3 +156,11 @@ footer {
   }
 }
 
+.block-img{
+  & span{
+    display: block !important;
+  }
+  & img{
+    display: block !important;
+  }
+}

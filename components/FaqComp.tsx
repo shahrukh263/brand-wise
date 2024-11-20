@@ -61,7 +61,7 @@ const FaqComp: NextComponentType = () => {
             <AccordionItem className={'border-b border-b-[#E4E7EC] mb-7 pb-7'} 
              header={
               <div className="flex justify-between items-center cursor-pointer">
-                <h4 className={'text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em]'}>Can I change my plan later?</h4>
+                <h4 className={'text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em] text-left'}>Can I change my plan later?</h4>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -101,7 +101,7 @@ const FaqComp: NextComponentType = () => {
             <AccordionItem className={'border-b border-b-[#E4E7EC] mb-7 pb-7'} 
              header={
               <div className="flex justify-between items-center cursor-pointer">
-                <h4 className={'text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em]'}>What is your cancellation policy?</h4>
+                <h4 className={'text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em] text-left'}>What is your cancellation policy?</h4>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -141,7 +141,7 @@ const FaqComp: NextComponentType = () => {
             <AccordionItem className={'border-b border-b-[#E4E7EC] mb-7 pb-7'} 
              header={
               <div className="flex justify-between items-center cursor-pointer">
-                <h4 className={'text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em]'}>Can other info be added to an invoice?</h4>
+                <h4 className={'text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em] text-left'}>Can other info be added to an invoice?</h4>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -181,7 +181,7 @@ const FaqComp: NextComponentType = () => {
             <AccordionItem className={'border-b border-b-[#E4E7EC] mb-7 pb-7'} 
              header={
               <div className="flex justify-between items-center cursor-pointer">
-                <h4 className={'text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em]'}>How does billing work?</h4>
+                <h4 className={'text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em] text-left'}>How does billing work?</h4>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -221,7 +221,7 @@ const FaqComp: NextComponentType = () => {
             <AccordionItem className={'border-b border-b-[#E4E7EC] mb-7 pb-7'} 
              header={
               <div className="flex justify-between items-center cursor-pointer">
-                <h4 className={'text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em]'}>How do I change my account email?</h4>
+                <h4 className={'text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em] text-left'}>How do I change my account email?</h4>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
