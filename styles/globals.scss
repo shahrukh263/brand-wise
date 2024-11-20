@@ -133,3 +133,26 @@ footer {
   -webkit-animation: scroll var(--animation-duration, 40s) linear infinite;
   animation: scroll var(--animation-duration, 40s) linear infinite;
 }
+.accordian-main {
+  & button {
+    display: block;
+    width: 100%;
+  }
+  & button[aria-expanded="true"]{
+    .plus-icon-accordian{
+      display: none;
+    }
+    .minus-icon-accordian{
+      display: block;
+    }
+  }
+  & button[aria-expanded="false"]{
+    .plus-icon-accordian{
+      display: block;
+    }
+    .minus-icon-accordian{
+      display: none;
+    }
+  }
+}
+

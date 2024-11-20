@@ -1,12 +1,8 @@
 import type { NextComponentType } from "next";
 import Image from "next/image";
 import { useState } from "react";
+import { Accordion, AccordionItem } from "@szhsin/react-accordion";
 const FaqComp: NextComponentType = () => {
-  const [isShowing, setIsShowing] = useState(false);
-  const toggle = () => {
-    setIsShowing(!isShowing);
-  };
-
   return (
     <>
       <section className="lg:py-24 md:py-20 sm:py-16 py-12">
@@ -21,38 +17,32 @@ const FaqComp: NextComponentType = () => {
               you're looking for.
             </p>
           </div>
-          <ul className="accordian-main mx-auto lg:w-8/12 xl:w-7/12 md:w-9/12 w-full">
-            <li className="border-b border-b-[#E4E7EC] mb-7 pb-7">
-              <div
-                className="flex justify-between items-center cursor-pointer"
-                onClick={toggle}
-              >
-                <h4 className="text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em]">
-                  Is there a free trial available?
-                </h4>
-                {isShowing ? (
-                  <svg
+          <Accordion className="accordian-main mx-auto lg:w-8/12 xl:w-7/12 md:w-9/12 w-full">
+            <AccordionItem initialEntered className={'border-b border-b-[#E4E7EC] mb-7 pb-7'} 
+             header={
+              <div className="flex justify-between items-center cursor-pointer">
+                <h4 className={'text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em]'}>Is there a free trial available?</h4>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6 minus-icon-accordian"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5 12h14"
+                  />
+                </svg>
+                <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-6 h-6"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M5 12h14"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-6 h-6"
+                    className="w-6 h-6 plus-icon-accordian"
                   >
                     <path
                       strokeLinecap="round"
@@ -60,47 +50,39 @@ const FaqComp: NextComponentType = () => {
                       d="M12 4.5v15m7.5-7.5h-15"
                     />
                   </svg>
-                )}
               </div>
-              <div style={{ display: isShowing ? "block" : "none" }}>
-                <p className="text-[#475467] sm:text-base text-sm tracking-[-0.011em]">
-                  Yes, you can try us for free for 30 days. If you want, we’ll
-                  provide you with a free, personalized 30-minute onboarding
-                  call to get you up and running as soon as possible.
-                </p>
-              </div>
-            </li>
-            <li className="border-b border-b-[#E4E7EC] mb-7 pb-7">
-            <div
-                className="flex justify-between items-center cursor-pointer"
-                onClick={toggle}
-              >
-                <h4 className="text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em]">
-                Can I change my plan later?
-                </h4>
-                {isShowing ? (
-                  <svg
+            }>
+              <p className="text-[#475467] sm:text-base text-sm tracking-[-0.011em]">
+                Yes, you can try us for free for 30 days. If you want, we’ll
+                provide you with a free, personalized 30-minute onboarding call
+                to get you up and running as soon as possible.
+              </p>
+            </AccordionItem>
+            <AccordionItem className={'border-b border-b-[#E4E7EC] mb-7 pb-7'} 
+             header={
+              <div className="flex justify-between items-center cursor-pointer">
+                <h4 className={'text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em]'}>Can I change my plan later?</h4>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6 minus-icon-accordian"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5 12h14"
+                  />
+                </svg>
+                <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-6 h-6"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M5 12h14"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-6 h-6"
+                    className="w-6 h-6 plus-icon-accordian"
                   >
                     <path
                       strokeLinecap="round"
@@ -108,105 +90,176 @@ const FaqComp: NextComponentType = () => {
                       d="M12 4.5v15m7.5-7.5h-15"
                     />
                   </svg>
-                )}
               </div>
-              <div style={{ display: isShowing ? "block" : "none" }}>
-                <p className="text-[#475467] sm:text-base text-sm tracking-[-0.011em]">
-                  Yes, you can try us for free for 30 days. If you want, we’ll
-                  provide you with a free, personalized 30-minute onboarding
-                  call to get you up and running as soon as possible.
-                </p>
-              </div>
-            </li>
-            <li className="border-b border-b-[#E4E7EC] mb-7 pb-7">
-              <div className="flex justify-between items-center">
-                <h4 className="text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em]">
-                  What is your cancellation policy?
-                </h4>
+            }>
+              <p className="text-[#475467] sm:text-base text-sm tracking-[-0.011em]">
+                Yes, you can try us for free for 30 days. If you want, we’ll
+                provide you with a free, personalized 30-minute onboarding call
+                to get you up and running as soon as possible.
+              </p>
+            </AccordionItem>
+            <AccordionItem className={'border-b border-b-[#E4E7EC] mb-7 pb-7'} 
+             header={
+              <div className="flex justify-between items-center cursor-pointer">
+                <h4 className={'text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em]'}>What is your cancellation policy?</h4>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6"
+                  className="w-6 h-6 minus-icon-accordian"
                 >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M12 4.5v15m7.5-7.5h-15"
+                    d="M5 12h14"
                   />
                 </svg>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6 plus-icon-accordian"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
               </div>
-              <div></div>
-            </li>
-            <li className="border-b border-b-[#E4E7EC] mb-7 pb-7">
-              <div className="flex justify-between items-center">
-                <h4 className="text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em]">
-                  Can other info be added to an invoice?
-                </h4>
+            }>
+              <p className="text-[#475467] sm:text-base text-sm tracking-[-0.011em]">
+                Yes, you can try us for free for 30 days. If you want, we’ll
+                provide you with a free, personalized 30-minute onboarding call
+                to get you up and running as soon as possible.
+              </p>
+            </AccordionItem>
+            <AccordionItem className={'border-b border-b-[#E4E7EC] mb-7 pb-7'} 
+             header={
+              <div className="flex justify-between items-center cursor-pointer">
+                <h4 className={'text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em]'}>Can other info be added to an invoice?</h4>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6"
+                  className="w-6 h-6 minus-icon-accordian"
                 >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M12 4.5v15m7.5-7.5h-15"
+                    d="M5 12h14"
                   />
                 </svg>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6 plus-icon-accordian"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
               </div>
-              <div></div>
-            </li>
-            <li className="border-b border-b-[#E4E7EC] mb-7 pb-7">
-              <div className="flex justify-between items-center">
-                <h4 className="text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em]">
-                  How does billing work?
-                </h4>
+            }>
+              <p className="text-[#475467] sm:text-base text-sm tracking-[-0.011em]">
+                Yes, you can try us for free for 30 days. If you want, we’ll
+                provide you with a free, personalized 30-minute onboarding call
+                to get you up and running as soon as possible.
+              </p>
+            </AccordionItem>
+            <AccordionItem className={'border-b border-b-[#E4E7EC] mb-7 pb-7'} 
+             header={
+              <div className="flex justify-between items-center cursor-pointer">
+                <h4 className={'text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em]'}>How does billing work?</h4>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6"
+                  className="w-6 h-6 minus-icon-accordian"
                 >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M12 4.5v15m7.5-7.5h-15"
+                    d="M5 12h14"
                   />
                 </svg>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6 plus-icon-accordian"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
               </div>
-              <div></div>
-            </li>
-            <li className="border-b border-b-[#E4E7EC] mb-7 pb-7">
-              <div className="flex justify-between items-center">
-                <h4 className="text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em]">
-                  How do I change my account email?
-                </h4>
+            }>
+              <p className="text-[#475467] sm:text-base text-sm tracking-[-0.011em]">
+                Yes, you can try us for free for 30 days. If you want, we’ll
+                provide you with a free, personalized 30-minute onboarding call
+                to get you up and running as soon as possible.
+              </p>
+            </AccordionItem>
+            <AccordionItem className={'border-b border-b-[#E4E7EC] mb-7 pb-7'} 
+             header={
+              <div className="flex justify-between items-center cursor-pointer">
+                <h4 className={'text-[#0C111D] sm:text-lg text-base font-medium tracking-[-0.006em]'}>How do I change my account email?</h4>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6"
+                  className="w-6 h-6 minus-icon-accordian"
                 >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M12 4.5v15m7.5-7.5h-15"
+                    d="M5 12h14"
                   />
                 </svg>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6 plus-icon-accordian"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
               </div>
-              <div></div>
-            </li>
-          </ul>
+            }>
+              <p className="text-[#475467] sm:text-base text-sm tracking-[-0.011em]">
+                Yes, you can try us for free for 30 days. If you want, we’ll
+                provide you with a free, personalized 30-minute onboarding call
+                to get you up and running as soon as possible.
+              </p>
+            </AccordionItem>
+          </Accordion>
+          
         </div>
       </section>
     </>
