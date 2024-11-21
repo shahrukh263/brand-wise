@@ -1,8 +1,9 @@
-import type { NextComponentType } from "next";
 import DataIcon from "../images/database-icon.svg";
 import Image from "next/image";
 import Link from "next/link";
-const PricingHero: NextComponentType = () => {
+import RangeSlider from "react-range-slider-input";
+import "react-range-slider-input/dist/style.css";
+const PricingHero = () => {
   return (
     <>
       <section className="pt-[60px] pb-[60px] md:pt-[100px] md:pb-[100px] relative bg-[url('../images/price-hero-bg.png')] bg-cover">
@@ -29,7 +30,28 @@ const PricingHero: NextComponentType = () => {
               </span>{" "}
               support tickets per month on average
             </h2>
-            <div className="mx-auto md:w-9/12 w-full mb-[48px]"></div>
+            <div className="mx-auto md:w-9/12 w-full mb-[48px]">
+              <div className="relative">
+                <RangeSlider
+                  className="single-thumb"
+                  defaultValue={[0, 55]}
+                  thumbsDisabled={[true, false]}
+                  rangeSlideDisabled={true}
+                />
+                <div className="mt-6 flex justify-between md:gap-0 gap-3 md:overflow-x-hidden overflow-x-auto">
+                  <span className="flex-shrink-0 text-sm font-medium tracking-[-0.006em] text-[#98A2B3]">100</span>
+                  <span className="flex-shrink-0 text-sm font-medium tracking-[-0.006em] text-[#98A2B3]">250</span>
+                  <span className="flex-shrink-0 text-sm font-medium tracking-[-0.006em] text-[#98A2B3]">500</span>
+                  <span className="flex-shrink-0 text-sm font-medium tracking-[-0.006em] text-[#98A2B3]">1000</span>
+                  <span className="flex-shrink-0 text-sm font-medium tracking-[-0.006em] text-[#98A2B3]">2500</span>
+                  <span className="flex-shrink-0 text-sm font-medium tracking-[-0.006em] text-[#98A2B3]">5000</span>
+                  <span className="flex-shrink-0 text-sm font-medium tracking-[-0.006em] text-[#0C111D]">10000</span>
+                  <span className="flex-shrink-0 text-sm font-medium tracking-[-0.006em] text-[#0C111D]">15000</span>
+                  <span className="flex-shrink-0 text-sm font-medium tracking-[-0.006em] text-[#0C111D]">20000</span>
+                  <span className="flex-shrink-0 text-sm font-medium tracking-[-0.006em] text-[#0C111D]">25000</span>
+                </div>
+              </div>
+            </div>
             <div className="pb-[48px] mb-[48px] border-b">
               <div className="text-center">
                 <ul className="bg-[#F2F4F7] rounded-[12px] py-[4px] px-[4px] inline-flex items-center gap-[4px] mb-6">
